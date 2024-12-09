@@ -1,66 +1,63 @@
-/* General Reset */
-* {
+/* General Styles */
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+    background: black;
+    color: white;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(45deg, red, black, green);
+header {
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+header ul li a {
     color: white;
-    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+#hero {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: background 1s ease;
-}
-
-h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-}
-
-button {
-    background-color: black;
+    text-align: center;
+    background: linear-gradient(45deg, red,black, green);
     color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.2rem;
+}
+
+.cta {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: red;
-}
-
-section {
-    margin: 50px 0;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    margin: 10px 0;
     font-size: 1.2rem;
+    transition: 0.3s ease;
 }
 
-a {
-    color: lightblue;
-    text-decoration: none;
+.cta:hover {
+    background: white;
+    color: black;
 }
 
-a:hover {
-    text-decoration: underline;
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    font-size: 0.8rem;
 }
