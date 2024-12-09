@@ -1,4 +1,4 @@
-/* General Reset */
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,79 +7,87 @@
 
 /* Body */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background: #141414; /* Dark background */
     color: white;
-    background: linear-gradient(45deg, #ff0000, #00ff00, #000000);
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    height: 100vh;
     overflow: hidden;
+    position: relative;
 }
 
 /* Background Animation */
 .bg-animation {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background: url('your-background-image.jpg') no-repeat center center fixed;
     background-size: cover;
-    animation: move-background 20s linear infinite;
+    animation: bgAnimation 20s infinite linear;
 }
 
-@keyframes move-background {
+@keyframes bgAnimation {
     0% { background-position: 0% 0%; }
     100% { background-position: 100% 100%; }
 }
 
 /* Main Container */
 .container {
-    position: relative;
-    z-index: 1;
+    z-index: 10;
     text-align: center;
-    max-width: 900px;
     padding: 2rem;
     width: 100%;
-    color: white;
+    max-width: 1200px;
 }
 
-/* Header */
-header h1 {
+/* Header Section */
+.main-header h1 {
     font-size: 3rem;
-    text-transform: uppercase;
+    letter-spacing: 4px;
     margin-bottom: 2rem;
+    text-transform: uppercase;
     font-weight: bold;
-    letter-spacing: 5px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 255, 0, 0.8);
 }
 
 .cta-btn {
-    padding: 1rem 3rem;
-    font-size: 1.25rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
     background-color: rgba(0, 255, 0, 0.8);
-    color: white;
     border: none;
     border-radius: 50px;
+    color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .cta-btn:hover {
     background-color: rgba(0, 255, 0, 1);
+    transform: scale(1.05);
 }
 
 /* About Section */
 .about-section {
     margin-top: 5rem;
-    background: rgba(0, 0, 0, 0.6); /* Slight black overlay for contrast */
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .about-section h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .about-section p {
@@ -87,9 +95,44 @@ header h1 {
     line-height: 1.6;
 }
 
+/* Projects Section */
+.projects-section {
+    margin-top: 5rem;
+}
+
+.projects-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.projects .project-card {
+    background: rgba(0, 255, 0, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 1rem;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.projects .project-card:hover {
+    transform: scale(1.05);
+}
+
+.projects .project-card h3 {
+    font-size: 2rem;
+    color: white;
+}
+
+.projects .project-card p {
+    font-size: 1.1rem;
+    color: #cccccc;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
-    header h1 {
+    .main-header h1 {
         font-size: 2.5rem;
     }
 
@@ -97,14 +140,23 @@ header h1 {
         padding: 1rem 2rem;
         font-size: 1rem;
     }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 2rem;
-    }
 
     .about-section h2 {
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header h1 {
+        font-size: 2rem;
+    }
+
+    .cta-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .projects .project-card {
+        padding: 1rem;
     }
 }
