@@ -1,63 +1,182 @@
 /* General Styles */
-body {
+* {
     margin: 0;
-    font-family: 'Orbitron', sans-serif;
-    background: black;
-    color: white;
-}
-
-header {
-    display: flex;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 1rem;
-}
-
-header ul {
-    list-style: none;
     padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 2rem;
+    box-sizing: border-box;
 }
 
-header ul li a {
-    color: white;
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Black background for the body */
+    color: #f0f0f0; /* White text color */
+    overflow: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+    color: #f0f0f0; /* White text for headings */
+}
+
+/* Links */
+a {
+    color: #ff5733;
     text-decoration: none;
-    font-size: 1.2rem;
+    transition: color 0.3s;
 }
 
-#hero {
-    height: 100vh;
+a:hover {
+    color: #00ff00;
+}
+
+/* Navbar Styles */
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    background: linear-gradient(45deg, red,black, green);
-    color: white;
+    z-index: 1000;
 }
 
-.cta {
-    margin-top: 1rem;
-    padding: 1rem 2rem;
-    background: transparent;
-    border: 2px solid white;
+nav a {
+    color: #ff5733;
+    margin-right: 20px;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: #00ff00;
+}
+
+/* Background Animation */
+@keyframes glowing {
+    0% { box-shadow: 0 0 5px #ff5733, 0 0 10px #ff5733, 0 0 20px #ff5733, 0 0 30px #ff5733, 0 0 40px #ff5733; }
+    50% { box-shadow: 0 0 5px #ff5733, 0 0 10px #ff5733, 0 0 20px #ff5733, 0 0 30px #ff5733, 0 0 50px #ff5733; }
+    100% { box-shadow: 0 0 5px #ff5733, 0 0 10px #ff5733, 0 0 20px #ff5733, 0 0 30px #ff5733, 0 0 40px #ff5733; }
+}
+
+.bg-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff5733, #900c3f, #16a085); /* Red, black, and green gradient */
+    animation: glowing 3s ease-in-out infinite alternate;
+    z-index: -1;
+}
+
+/* Button */
+button, .cta-btn {
+    background-color: #ff5733;
     color: white;
-    cursor: pointer;
+    padding: 15px 30px;
+    border: none;
     font-size: 1.2rem;
-    transition: 0.3s ease;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
 }
 
-.cta:hover {
-    background: white;
-    color: black;
+button:hover, .cta-btn:hover {
+    background-color: #00ff00;
 }
 
-/* Footer */
-footer {
+/* About Section */
+.about-section {
+    padding: 80px 20px;
     text-align: center;
-    padding: 1rem;
-    background: rgba(0, 0, 0, 0.8);
-    font-size: 0.8rem;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00ff00; /* Green color for headings */
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #f0f0f0; /* White text */
+}
+
+.about-section ul {
+    list-style: none;
+}
+
+.about-section li {
+    margin: 10px 0;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 60px 20px;
+    background-color: #1c1c1c; /* Dark background */
+    color: #f0f0f0; /* White text */
+}
+
+.portfolio-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ff5733; /* Red color for portfolio heading */
+}
+
+.portfolio-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.portfolio-item a {
+    color: #ff5733;
+    font-size: 1.2rem;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #121212; /* Black background */
+    color: #f0f0f0; /* White text */
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #ff5733;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #00ff00;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    .about-section {
+        padding: 50px 10px;
+    }
+
+    .portfolio-section {
+        padding: 50px 10px;
+    }
+
+    .portfolio-item {
+        flex-direction: column;
+        align-items: center;
+    }
 }
