@@ -1,89 +1,66 @@
-/* General Styles */
-body {
-    margin: 0;
-    font-family: 'Orbitron', sans-serif;
-    background: black;
-    color: white;
-    overflow: hidden; /* Prevent scrolling caused by particles */
-}
-
-h1, h2, p {
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Hero Section */
-#hero {
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, red, black, green);
+    color: white;
+    text-align: center;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    background: linear-gradient(135deg, red, black, green);
-    color: white;
-    position: relative; /* Required for absolute positioning of particles */
-    animation: heroAnimation 5s infinite alternate;
+    transition: background 1s ease;
 }
 
-/* Hero Section Content */
-.hero-content h1 {
-    font-size: 4rem;
+h1 {
+    font-size: 3rem;
     margin-bottom: 20px;
 }
 
-.hero-content p {
+p {
     font-size: 1.5rem;
     margin-bottom: 30px;
 }
 
-.cta {
-    padding: 15px 30px;
-    background-color: transparent;
-    border: 2px solid green;
-    color: green;
-    font-size: 1.2rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.cta:hover {
-    background-color: green;
-    color: black;
-    border-color: red;
-    transform: scale(1.1);
-}
-
-/* Particle Effect */
-.particle {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: rgba(0, 255, 0, 0.7); /* Green particles */
-    border-radius: 50%;
-    animation: particleMove 3s infinite ease-in-out;
-}
-
-@keyframes particleMove {
-    0% { transform: translateY(0); opacity: 0.8; }
-    50% { transform: translateY(50px); opacity: 0.5; }
-    100% { transform: translateY(0); opacity: 0.8; }
-}
-
-/* Hero Section Animation */
-@keyframes heroAnimation {
-    0% {
-        background: linear-gradient(135deg, red, black, green);
-    }
-    100% {
-        background: linear-gradient(135deg, green, black, red);
-    }
-}
-
-/* Footer Styling */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.9);
-    font-size: 0.9rem;
+button {
+    background-color: black;
     color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: red;
+}
+
+section {
+    margin: 50px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+a {
+    color: lightblue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
