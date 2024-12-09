@@ -1,0 +1,77 @@
+/* Hero Section Animations */
+#hero {
+    animation: backgroundGlow 8s infinite alternate, textFadeIn 3s ease-out;
+}
+
+@keyframes backgroundGlow {
+    0% {
+        background: radial-gradient(circle, rgba(255,0,0,0.8), rgba(0,0,0,1) 60%);
+    }
+    100% {
+        background: radial-gradient(circle, rgba(255,0,0,0.6), rgba(0,0,0,1) 80%);
+    }
+}
+
+/* Text Fade-In Animation */
+@keyframes textFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CTA Button Hover Animation */
+.cta {
+    animation: buttonHover 0.3s ease-out;
+}
+
+.cta:hover {
+    animation: buttonHover 0.3s ease-out;
+    background: white;
+    color: black;
+    transform: scale(1.1);
+}
+
+@keyframes buttonHover {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    }
+    100% {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    }
+}
+
+/* Particle Effect (Animated Background) */
+@keyframes particleMove {
+    0% { transform: translateY(0); opacity: 0.8; }
+    50% { transform: translateY(20px); opacity: 0.5; }
+    100% { transform: translateY(0); opacity: 0.8; }
+}
+
+.particle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 0, 0, 0.7);
+    border-radius: 50%;
+    animation: particleMove 1.5s infinite ease-in-out;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+/* Optional Additional Glow Effects */
+@keyframes glowParticles {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    }
+}
