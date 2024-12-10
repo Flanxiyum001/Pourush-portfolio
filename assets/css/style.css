@@ -1,4 +1,4 @@
-/* General Reset */
+/* Reset and Base Styling */
 * {
     margin: 0;
     padding: 0;
@@ -7,182 +7,101 @@
   
   body {
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #ffffff; /* Text color */
-    background: linear-gradient(to bottom, #000000, #111111); /* Subtle background gradient */
+    background: linear-gradient(to bottom, #000000, #111111);
+    color: #ffffff;
     overflow-x: hidden;
+    line-height: 1.6;
   }
   
-  /* Header Section */
+  /* Header */
   header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    background: linear-gradient(135deg, #1a1a1a, #333333);
-    position: relative;
-  }
-  
-  header .container {
-    max-width: 1200px;
-    padding: 20px;
+    background: linear-gradient(135deg, #101010, #202020);
   }
   
   header h1 {
     font-size: 3rem;
-    color: #ff4500;
-    text-shadow: 0 0 10px #ff6347;
+    color: #00ff00;
+    text-shadow: 0 0 20px #00ff00;
   }
   
   header p {
-    margin: 10px 0 20px;
+    margin-top: 10px;
     font-size: 1.2rem;
-    color: #dddddd;
+    color: #bbbbbb;
   }
   
   header .cta-button {
+    margin-top: 20px;
     padding: 10px 20px;
     font-size: 1rem;
+    background: #00cc00;
     color: #ffffff;
-    background: #ff4500;
-    border: none;
-    border-radius: 25px;
     text-decoration: none;
-    transition: background 0.3s ease;
+    border-radius: 25px;
+    transition: background 0.3s;
   }
   
   header .cta-button:hover {
-    background: #e03c00;
+    background: #009900;
   }
   
-  header .theme-button {
-    margin-top: 20px;
-    padding: 10px 15px;
-    font-size: 1rem;
-    color: #ffffff;
-    background: #444444;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  header .theme-button:hover {
-    background: #555555;
-  }
-  
-  /* Main Content */
-  main {
-    padding: 50px 20px;
-  }
-  
+  /* Sections */
   section {
-    margin-bottom: 50px;
-    padding: 20px;
-    background: #222222;
+    padding: 50px 20px;
+    margin: 20px 0;
+    background: #151515;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   }
   
   section h2 {
     font-size: 2rem;
-    margin-bottom: 10px;
-    color: #ff4500;
+    margin-bottom: 15px;
+    color: #00ff00;
+    border-bottom: 2px solid #00ff00;
+    display: inline-block;
   }
   
-  section p, section ul {
-    color: #dddddd;
-    margin-bottom: 10px;
-  }
-  
-  section ul {
-    padding-left: 20px;
-  }
-  
-  .portfolio-item {
-    margin-top: 15px;
-  }
-  
-  .portfolio-item h3 {
-    font-size: 1.2rem;
-    color: #ff6347;
-  }
-  
-  .portfolio-item a {
-    color: #1e90ff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .portfolio-item a:hover {
-    color: #63b8ff;
-  }
-  
-  /* Footer Section */
-  footer {
-    background: #111111;
-    color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  footer .contact-container {
-    max-width: 600px;
-    margin: 0 auto 20px;
-  }
-  
-  footer h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #ff4500;
-  }
-  
-  footer form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  footer input, footer textarea, footer button {
-    padding: 10px;
+  section p {
+    color: #cccccc;
     font-size: 1rem;
-    border: 1px solid #333333;
-    border-radius: 5px;
-    width: 100%;
   }
   
-  footer button {
-    background: #ff4500;
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #101010;
     color: #ffffff;
-    border: none;
-    cursor: pointer;
   }
   
-  footer button:hover {
-    background: #e03c00;
+  footer a {
+    color: #00ff00;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  footer a:hover {
+    color: #00cc00;
   }
   
   /* Responsive Design */
   @media (max-width: 768px) {
     header h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
   
     header p {
       font-size: 1rem;
     }
   
-    .cta-button, .theme-button {
-      font-size: 0.9rem;
-      padding: 8px 15px;
-    }
-  
     section h2 {
-      font-size: 1.5rem;
-    }
-  
-    footer h2 {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
     }
   }
   
