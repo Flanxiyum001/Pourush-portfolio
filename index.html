@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pourush Nair - Portfolio</title>
+  <title>Pourush Portfolio</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/animations.css">
 </head>
@@ -13,49 +13,49 @@
       <h1>Pourush Nair</h1>
       <p>Making an online version of myself with programming</p>
       <a href="#about" class="cta-button">Welcome to my world!</a>
-      <button id="theme-toggle" class="theme-button">Dark Mode</button>
     </div>
   </header>
 
   <main>
-    <section id="about" class="fade-in">
-      <h2>About Me</h2>
-      <p>
-        I'm doing my graduation and love coding and learning languages. Hobbies include gaming, music, reading books, and more. I have good experience in gaming.
-      </p>
-      <ul>
-        <li><strong>Skills:</strong> Python, JavaScript, learning other languages, creating projects with Python.</li>
-        <li><strong>Fun Facts:</strong> Aspiring to be an eSports player and a developer.</li>
-      </ul>
+    <!-- About Section -->
+    <section id="about">
+      <div class="about-container">
+        <h2>About Me</h2>
+        <p>
+          I'm Pourush Nair, a passionate coder, gamer, and lifelong learner. 
+          Currently pursuing my graduation, I love experimenting with Python and JavaScript to create exciting projects.
+        </p>
+        <p>
+          When I'm not coding, you'll find me immersed in gaming, listening to music, or diving into a great book.
+        </p>
+      </div>
     </section>
 
-    <section id="portfolio" class="fade-in">
-      <h2>Portfolio</h2>
-      <div class="portfolio-item">
-        <h3>Web-Ruby</h3>
-        <a href="https://github.com/Flanxiyum001/Web-Ruby" target="_blank" rel="noopener">GitHub Repository</a>
-      </div>
-      <div class="portfolio-item">
-        <h3>Flanxiyum-AI</h3>
-        <a href="https://github.com/Flanxiyum001/Flanxiyum-AI" target="_blank" rel="noopener">GitHub Repository</a>
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+      <div class="portfolio-container">
+        <h2>My Work</h2>
+        <div class="portfolio-grid">
+          <!-- Portfolio Item 1 -->
+          <div class="portfolio-item">
+            <h3>Web-Ruby</h3>
+            <p>Dynamic and interactive web application built with modern frameworks.</p>
+            <a href="https://github.com/Flanxiyum001/Web-Ruby" target="_blank" rel="noopener" class="portfolio-link">View Project</a>
+          </div>
+
+          <!-- Portfolio Item 2 -->
+          <div class="portfolio-item">
+            <h3>Flanxiyum AI</h3>
+            <p>Innovative AI assistant with machine learning capabilities.</p>
+            <a href="https://github.com/Flanxiyum001/Flanxiyum-AI" target="_blank" rel="noopener" class="portfolio-link">View Project</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="contact-container">
-      <h2>Contact Me</h2>
-      <form id="contact-form" action="https://formspree.io/f/{your_form_id}" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
     <p>&copy; 2024 Pourush Nair. All rights reserved.</p>
   </footer>
-
-  <script src="assets/js/animations.js"></script>
-  <script src="assets/js/script.js"></script>
 </body>
 </html>
