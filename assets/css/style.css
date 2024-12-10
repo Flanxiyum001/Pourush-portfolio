@@ -1,122 +1,188 @@
-/* General Styles */
-body {
+/* General Reset */
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #fff;
+    padding: 0;
+    box-sizing: border-box;
   }
   
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #ffffff; /* Text color */
+    background: linear-gradient(to bottom, #000000, #111111); /* Subtle background gradient */
+    overflow-x: hidden;
+  }
+  
+  /* Header Section */
   header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     text-align: center;
-    padding: 5rem 1rem;
-    background: linear-gradient(135deg, #111, #222);
+    background: linear-gradient(135deg, #1a1a1a, #333333);
+    position: relative;
+  }
+  
+  header .container {
+    max-width: 1200px;
+    padding: 20px;
   }
   
   header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #e63946;
+    font-size: 3rem;
+    color: #ff4500;
+    text-shadow: 0 0 10px #ff6347;
   }
   
   header p {
+    margin: 10px 0 20px;
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    color: #dddddd;
   }
   
-  .cta-button {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background-color: #e63946;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .cta-button:hover {
-    background-color: #d62828;
-  }
-  
-  /* About Section */
-  #about {
-    padding: 4rem 2rem;
-    background-color: #111;
-    color: #fff;
-    text-align: center;
-  }
-  
-  #about h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  #about p {
+  header .cta-button {
+    padding: 10px 20px;
     font-size: 1rem;
-    line-height: 1.8;
-    margin: 0.5rem 0;
+    color: #ffffff;
+    background: #ff4500;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease;
   }
   
-  /* Portfolio Section */
-  #portfolio {
-    padding: 4rem 2rem;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
+  header .cta-button:hover {
+    background: #e03c00;
   }
   
-  #portfolio h2 {
+  header .theme-button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #ffffff;
+    background: #444444;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  header .theme-button:hover {
+    background: #555555;
+  }
+  
+  /* Main Content */
+  main {
+    padding: 50px 20px;
+  }
+  
+  section {
+    margin-bottom: 50px;
+    padding: 20px;
+    background: #222222;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  section h2 {
     font-size: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 10px;
+    color: #ff4500;
   }
   
-  .portfolio-container {
-    max-width: 1200px;
-    margin: 0 auto;
+  section p, section ul {
+    color: #dddddd;
+    margin-bottom: 10px;
   }
   
-  .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+  section ul {
+    padding-left: 20px;
   }
   
   .portfolio-item {
-    background-color: #222;
-    padding: 1.5rem;
-    border-radius: 10px;
-    transition: transform 0.3s, background-color 0.3s;
-  }
-  
-  .portfolio-item:hover {
-    transform: translateY(-10px);
-    background-color: #333;
+    margin-top: 15px;
   }
   
   .portfolio-item h3 {
-    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #ff6347;
   }
   
-  .portfolio-link {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #e63946;
-    color: #fff;
+  .portfolio-item a {
+    color: #1e90ff;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: color 0.3s ease;
   }
   
-  .portfolio-link:hover {
-    background-color: #d62828;
+  .portfolio-item a:hover {
+    color: #63b8ff;
   }
   
-  /* Footer */
+  /* Footer Section */
   footer {
+    background: #111111;
+    color: #ffffff;
+    padding: 20px 0;
     text-align: center;
-    padding: 1rem;
-    background-color: #111;
-    color: #888;
+  }
+  
+  footer .contact-container {
+    max-width: 600px;
+    margin: 0 auto 20px;
+  }
+  
+  footer h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ff4500;
+  }
+  
+  footer form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  footer input, footer textarea, footer button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  footer button {
+    background: #ff4500;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  footer button:hover {
+    background: #e03c00;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    header p {
+      font-size: 1rem;
+    }
+  
+    .cta-button, .theme-button {
+      font-size: 0.9rem;
+      padding: 8px 15px;
+    }
+  
+    section h2 {
+      font-size: 1.5rem;
+    }
+  
+    footer h2 {
+      font-size: 1.5rem;
+    }
   }
   
