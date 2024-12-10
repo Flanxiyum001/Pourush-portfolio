@@ -1,33 +1,19 @@
-/* Basic Reset and Font Import */
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
+  /* Body Styling */
   body {
     font-family: 'Roboto', sans-serif;
+    background-color: #121212;
     color: #fff;
     line-height: 1.6;
-    background: linear-gradient(135deg, #ff4d4d, #ffacac);
-    background-size: 400% 400%;
-    animation: gradientAnimation 15s ease infinite;
   }
   
-  /* Background Animation */
-  @keyframes gradientAnimation {
-    0% {
-      background: linear-gradient(135deg, #ff4d4d, #ffacac);
-    }
-    50% {
-      background: linear-gradient(135deg, #ffacac, #ff4d4d);
-    }
-    100% {
-      background: linear-gradient(135deg, #ff4d4d, #ffacac);
-    }
-  }
-  
-  /* Main container to center content */
+  /* Container Class */
   .container {
     width: 80%;
     margin: 0 auto;
@@ -35,169 +21,125 @@
   
   /* Header Styling */
   header {
+    background: #0a0a0a;
+    padding: 60px 0;
     text-align: center;
-    padding: 100px 0;
+    border-bottom: 2px solid #ff4d4d;
   }
   
   header h1 {
-    font-size: 3rem;
-    font-weight: bold;
+    font-size: 3em;
     color: #ff4d4d;
-    margin-bottom: 20px;
   }
   
   header p {
-    font-size: 1.2rem;
-    color: #fff;
-    margin-bottom: 40px;
+    font-size: 1.2em;
+    margin-top: 10px;
   }
   
-  header button {
+  .cta-button {
     background-color: #ff4d4d;
-    color: #fff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
     border: none;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  header button:hover {
-    background-color: #ffacac;
-  }
-  
-  /* About Section Styling */
-  #about {
-    text-align: center;
-    padding: 60px 0;
-    background-color: #222;
-  }
-  
-  #about h2 {
-    font-size: 2.5rem;
-    color: #fff;
-    margin-bottom: 20px;
-  }
-  
-  #about p {
-    font-size: 1.2rem;
-    color: #bbb;
-    margin-bottom: 40px;
-  }
-  
-  /* My Work Section Styling */
-  #work {
-    display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
-    width: 80%;
-    padding: 80px 0;
-  }
-  
-  .card {
-    background-color: #333;
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-    width: 45%;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  
-  .card h3 {
-    font-size: 2rem;
-    color: #ff4d4d;
-    margin-bottom: 20px;
-  }
-  
-  .card p {
-    color: #bbb;
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-  }
-  
-  .card a {
-    background-color: #ff4d4d;
-    color: #fff;
-    text-decoration: none;
-    padding: 12px 30px;
     border-radius: 5px;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
   }
   
-  .card a:hover {
-    background-color: #ffacac;
+  .cta-button:hover {
+    background-color: #e60000;
+    transform: scale(1.05);
   }
   
-  /* Hover Effects and Fade In */
-  .card:hover {
-    transform: translateY(-10px);
-    opacity: 1;
+  /* About Me Section */
+  #aboutMe {
+    padding: 60px 0;
+    text-align: center;
   }
   
-  .card-visible {
-    opacity: 1;
-    transform: translateY(0);
+  #aboutMe h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  #aboutMe p {
+    font-size: 1.1em;
+    margin: 10px 0;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* My Work Section */
+  #myWork {
+    background-color: #1a1a1a;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  #myWork h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .work-item {
+    background-color: #121212;
+    border: 1px solid #ff4d4d;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .work-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .work-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  .work-item p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+  }
+  
+  .work-item a {
+    text-decoration: none;
+  }
+  
+  .work-item button {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 15px;
+  }
+  
+  .work-item button:hover {
+    background-color: #e60000;
+    transform: scale(1.05);
   }
   
   /* Footer Styling */
   footer {
+    background-color: #0a0a0a;
     text-align: center;
-    padding: 40px 0;
-    background-color: #222;
-    color: #bbb;
+    padding: 20px;
+    border-top: 2px solid #ff4d4d;
   }
   
   footer p {
-    font-size: 1rem;
-  }
-  
-  /* Subtle Animation for Elements */
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Animation for Sections to Fade In */
-  #about,
-  #work {
-    animation: fadeInUp 1.5s ease-out forwards;
-  }
-  
-  .card {
-    animation: fadeInUp 1s ease-out forwards;
-    animation-delay: 0.5s;
-  }
-  
-  /* Responsiveness */
-  @media (max-width: 768px) {
-    .container {
-      width: 90%;
-    }
-  
-    header h1 {
-      font-size: 2.5rem;
-    }
-  
-    header p {
-      font-size: 1rem;
-    }
-  
-    .card {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-  
-    .card a {
-      font-size: 1rem;
-    }
+    font-size: 1.1em;
+    color: #fff;
   }
   
