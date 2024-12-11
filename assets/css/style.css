@@ -27,16 +27,6 @@ body.animated-background {
     }
 }
 
-/* Parallax Section */
-.parallax {
-    background-image: url('your-image.jpg'); /* Replace with your image */
-    height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 /* Container Class */
 .container {
     width: 80%;
@@ -101,6 +91,13 @@ header p {
     margin-right: auto;
 }
 
+#aboutMe img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
 /* My Work Section */
 #myWork {
     background-color: #1a1a1a;
@@ -138,6 +135,13 @@ header p {
     margin-bottom: 20px;
 }
 
+.work-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
 .work-item button {
     background-color: #ff4d4d;
     color: white;
@@ -154,33 +158,6 @@ header p {
     background-color: #e60000;
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-}
-
-/* Image Section */
-#workspace {
-    padding: 60px 0;
-    text-align: center;
-    background: #f4f4f4;
-    color: #333;
-}
-
-#workspace img {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
-/* Link Styles */
-a {
-    color: #ff4d4d;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #e60000;
 }
 
 /* Footer Styling */
