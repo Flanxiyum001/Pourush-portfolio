@@ -3,41 +3,66 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  /* Body Styling */
-  body {
+}
+
+/* Body Styling */
+body {
     font-family: 'Roboto', sans-serif;
-    background-color: #121212;
+    background: linear-gradient(135deg, #121212, #1a1a1a);
     color: #fff;
     line-height: 1.6;
-  }
-  
-  /* Container Class */
-  .container {
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Parallax Section */
+.parallax {
+    background-image: url('your-image.jpg'); /* Replace with your image */
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Container Class */
+.container {
     width: 80%;
     margin: 0 auto;
-  }
-  
-  /* Header Styling */
-  header {
+}
+
+/* Header Styling */
+header {
     background: #0a0a0a;
     padding: 60px 0;
     text-align: center;
     border-bottom: 2px solid #ff4d4d;
-  }
-  
-  header h1 {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+header h1 {
     font-size: 3em;
     color: #ff4d4d;
-  }
-  
-  header p {
+}
+
+header p {
     font-size: 1.2em;
     margin-top: 10px;
-  }
-  
-  .cta-button {
+}
+
+.button {
     background-color: #ff4d4d;
     color: white;
     padding: 10px 20px;
@@ -47,73 +72,73 @@
     cursor: pointer;
     margin-top: 20px;
     text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .cta-button:hover {
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
     background-color: #e60000;
     transform: scale(1.05);
-  }
-  
-  /* About Me Section */
-  #aboutMe {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* About Me Section */
+#aboutMe {
     padding: 60px 0;
     text-align: center;
-  }
-  
-  #aboutMe h2 {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+#aboutMe h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-  }
-  
-  #aboutMe p {
+}
+
+#aboutMe p {
     font-size: 1.1em;
     margin: 10px 0;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-  }
-  
-  /* My Work Section */
-  #myWork {
+}
+
+/* My Work Section */
+#myWork {
     background-color: #1a1a1a;
     padding: 60px 0;
     text-align: center;
-  }
-  
-  #myWork h2 {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+#myWork h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-  }
-  
-  .work-item {
+}
+
+.work-item {
     background-color: #121212;
     border: 1px solid #ff4d4d;
     margin: 20px 0;
     padding: 20px;
     border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .work-item:hover {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.work-item:hover {
     transform: scale(1.05);
-  }
-  
-  .work-item h3 {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.work-item h3 {
     font-size: 1.8em;
     margin-bottom: 10px;
-  }
-  
-  .work-item p {
+}
+
+.work-item p {
     font-size: 1.1em;
     margin-bottom: 20px;
-  }
-  
-  .work-item a {
-    text-decoration: none;
-  }
-  
-  .work-item button {
+}
+
+.work-item button {
     background-color: #ff4d4d;
     color: white;
     padding: 10px 20px;
@@ -121,25 +146,32 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.1em;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     margin-top: 15px;
-  }
-  
-  .work-item button:hover {
+}
+
+.work-item button:hover {
     background-color: #e60000;
     transform: scale(1.05);
-  }
-  
-  /* Footer Styling */
-  footer {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Link Styles */
+a {
+    color: #ff4d4d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #e60000;
+}
+
+/* Footer Styling */
+footer {
     background-color: #0a0a0a;
-    text-align: center;
-    padding: 20px;
-    border-top: 2px solid #ff4d4d;
-  }
-  
-  footer p {
-    font-size: 1.1em;
     color: #fff;
-  }
-  
+    padding: 20px 0;
+    text-align: center;
+    border-top: 2px solid #ff4d4d;
+}
