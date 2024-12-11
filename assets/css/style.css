@@ -48,8 +48,9 @@ body.animated-background {
 }
 
 .digit {
-    font-size: 3em;
-    color: black;
+    font-family: 'Courier New', monospace; 
+    font-size: 100px; 
+    color: black; 
     width: 33%;
     transform: translateY(0);
     transition: transform 1s ease-in-out;

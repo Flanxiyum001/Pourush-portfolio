@@ -118,17 +118,19 @@
         count++;
         if (count > 100) {
           clearInterval(interval);
-          document.getElementById('digit1').classList.add('slide-up');
+          setTimeout(function() {
+            document.getElementById('digit1').classList.add('slide-up');
+          }, 0); // No delay for the first slide
           setTimeout(function() {
             document.getElementById('digit2').classList.add('slide-up');
-          }, 2000); // 2-second gap
+          }, 1000); // 1-second gap
           setTimeout(function() {
             document.getElementById('digit3').classList.add('slide-up');
-          }, 4000); // 2-second gap after second digit
+          }, 2000); // 1-second gap after second digit
           setTimeout(function() {
             document.getElementById('preloader').style.display = 'none';
             document.getElementById('mainContent').classList.remove('hidden');
-          }, 6000); // Delay to allow all slides to open
+          }, 3000); // Delay to allow all slides to open
         }
       }, 40); // 4000ms/100 = 40ms per count
     });
