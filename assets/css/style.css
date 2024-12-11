@@ -98,12 +98,25 @@ header p {
     margin-top: 20px;
 }
 
-/* My Work Section */
+/* My Work Section with Animated Background */
 #myWork {
-    background-color: #1a1a1a;
     padding: 60px 0;
     text-align: center;
-    animation: fadeIn 0.5s ease forwards;
+    background: linear-gradient(270deg, #ff7e5f, #feb47b);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 #myWork h2 {
@@ -112,7 +125,7 @@ header p {
 }
 
 .work-item {
-    background-color: #121212;
+    background-color: rgba(18, 18, 18, 0.8); /* Slightly transparent to show background animation */
     border: 1px solid #ff4d4d;
     margin: 20px 0;
     padding: 20px;
