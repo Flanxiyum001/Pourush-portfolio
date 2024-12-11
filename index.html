@@ -12,9 +12,9 @@
   <!-- Preloader Screen -->
   <div id="preloader">
     <div class="loader-container">
-      <div class="digit" id="digit1">0</div>
-      <div class="digit" id="digit2">0</div>
-      <div class="digit" id="digit3">0</div>
+      <div class="slide digit1" id="digit1">0</div>
+      <div class="slide digit2" id="digit2">0</div>
+      <div class="slide digit3" id="digit3">0</div>
     </div>
   </div>
 
@@ -118,11 +118,17 @@
         count++;
         if (count > 100) {
           clearInterval(interval);
-          document.getElementById('preloader').classList.add('slide-up');
+          document.getElementById('digit1').classList.add('slide-up');
+          setTimeout(function() {
+            document.getElementById('digit2').classList.add('slide-up');
+          }, 2000); // 2-second gap
+          setTimeout(function() {
+            document.getElementById('digit3').classList.add('slide-up');
+          }, 4000); // 2-second gap after second digit
           setTimeout(function() {
             document.getElementById('preloader').style.display = 'none';
             document.getElementById('mainContent').classList.remove('hidden');
-          }, 1000); // Delay to allow slide up transition
+          }, 6000); // Delay to allow all slides to open
         }
       }, 40); // 4000ms/100 = 40ms per count
     });
