@@ -104,7 +104,7 @@ header p {
     text-align: center;
     background: linear-gradient(45deg, red, green, black, red, green, black);
     background-size: 300% 100%;
-    animation: flowingRiver 3s linear infinite;
+    animation: flowingRiver 6s linear infinite;
     color: white; /* Text color */
 }
 
