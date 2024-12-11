@@ -35,12 +35,12 @@ body.animated-background {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #121212;
+    background-color: orange;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    transition: opacity 1s ease-out; /* Fade out transition */
+    transition: transform 1s ease; /* Slide up transition */
 }
 
 .loader-container {
@@ -49,7 +49,7 @@ body.animated-background {
 
 #countdown {
     font-size: 3em;
-    color: #ff4d4d;
+    color: black;
 }
 
 /* Hidden class for main content */

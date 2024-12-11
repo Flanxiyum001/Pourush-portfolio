@@ -12,7 +12,7 @@
   <!-- Preloader Screen -->
   <div id="preloader">
     <div class="loader-container">
-      <div id="countdown">1</div>
+      <div id="countdown">001</div>
     </div>
   </div>
 
@@ -107,15 +107,16 @@
       var countdown = document.getElementById('countdown');
       var count = 1;
       var interval = setInterval(function() {
-        countdown.innerText = count;
+        countdown.innerText = count.toString().padStart(3, '0');
         count++;
         if (count > 100) {
           clearInterval(interval);
-          document.getElementById('preloader').style.opacity = '0';
+          document.getElementById('preloader').style.transform = 'translateY(-100%)';
+          document.getElementById('preloader').style.transition = 'transform 1s ease';
           setTimeout(function() {
             document.getElementById('preloader').style.display = 'none';
             document.getElementById('mainContent').classList.remove('hidden');
-          }, 1000); // Delay to allow fade out transition
+          }, 1000); // Delay to allow slide up transition
         }
       }, 40); // 4000ms/100 = 40ms per count
     });
