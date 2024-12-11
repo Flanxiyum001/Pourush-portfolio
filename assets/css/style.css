@@ -102,7 +102,7 @@ header p {
 #myWork {
     padding: 60px 0;
     text-align: center;
-    background: linear-gradient(45deg, red, green, black);
+    background: linear-gradient(45deg, red,black);
     background-size: 300% 100%;
     animation: flowingRiver 6s linear infinite;
 }
