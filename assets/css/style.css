@@ -5,8 +5,8 @@
     box-sizing: border-box;
 }
 
-/* Body Styling */
-body {
+/* Animated Background */
+body.animated-background {
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(135deg, #121212, #1a1a1a);
     color: #fff;
@@ -29,7 +29,7 @@ body {
 
 /* Parallax Section */
 .parallax {
-    background-image: url('your-image.jpg'); /* Replace with your image */
+    background-image: url('your-image.jpg'); 
     height: 500px;
     background-attachment: fixed;
     background-position: center;
