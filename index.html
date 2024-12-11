@@ -9,6 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="animated-background">
+  <!-- Preloader Screen -->
+  <div id="preloader">
+    <div class="loader-container">
+      <div id="countdown">1</div>
+    </div>
+  </div>
+
   <header>
     <div class="container">
       <h1>Pourush Nair</h1>
@@ -91,6 +98,21 @@
       } else {
         chatBot.style.display = 'none';
       }
+    });
+
+    // JavaScript for Preloader Timer
+    document.addEventListener('DOMContentLoaded', function() {
+      var countdown = document.getElementById('countdown');
+      var count = 1;
+      var interval = setInterval(function() {
+        countdown.innerText = count;
+        count++;
+        if (count > 100) {
+          clearInterval(interval);
+          document.getElementById('preloader').style.display = 'none';
+          document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+      }, 40); // 4000ms/100 = 40ms per count
     });
   </script>
 </body>
