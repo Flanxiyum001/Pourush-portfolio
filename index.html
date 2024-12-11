@@ -12,7 +12,9 @@
   <!-- Preloader Screen -->
   <div id="preloader">
     <div class="loader-container">
-      <div id="countdown">001</div>
+      <div class="digit" id="digit1">0</div>
+      <div class="digit" id="digit2">0</div>
+      <div class="digit" id="digit3">0</div>
     </div>
   </div>
 
@@ -104,15 +106,19 @@
 
     // JavaScript for Preloader Timer
     document.addEventListener('DOMContentLoaded', function() {
-      var countdown = document.getElementById('countdown');
-      var count = 1;
+      var digit1 = document.getElementById('digit1');
+      var digit2 = document.getElementById('digit2');
+      var digit3 = document.getElementById('digit3');
+      var count = 0;
       var interval = setInterval(function() {
-        countdown.innerText = count.toString().padStart(3, '0');
+        var countStr = count.toString().padStart(3, '0');
+        digit1.innerText = countStr.charAt(0);
+        digit2.innerText = countStr.charAt(1);
+        digit3.innerText = countStr.charAt(2);
         count++;
         if (count > 100) {
           clearInterval(interval);
-          document.getElementById('preloader').style.transform = 'translateY(-100%)';
-          document.getElementById('preloader').style.transition = 'transform 1s ease';
+          document.getElementById('preloader').classList.add('slide-up');
           setTimeout(function() {
             document.getElementById('preloader').style.display = 'none';
             document.getElementById('mainContent').classList.remove('hidden');

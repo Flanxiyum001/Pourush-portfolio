@@ -44,12 +44,20 @@ body.animated-background {
 }
 
 .loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
-#countdown {
+.digit {
     font-size: 3em;
     color: black;
+    margin: 5px 0;
+}
+
+#preloader.slide-up {
+    transform: translateY(-100%);
 }
 
 /* Hidden class for main content */
