@@ -50,8 +50,11 @@
     </div>
   </section>
 
-  <!-- Contact Me Section -->
-  <section id="contact">
+  <!-- Contact Button -->
+  <button id="contactBtn" class="cta-button">Contact Me</button>
+
+  <!-- Chat Bot Style Contact Form -->
+  <div id="chatBot" class="chat-bot">
     <div class="contact-container">
       <h1>Contact Me</h1>
       <form action="mailto:pourushnair@gmail.com" method="post" enctype="text/plain">
@@ -70,7 +73,7 @@
           <button type="submit" class="submit-btn">Send Message</button>
       </form>
     </div>
-  </section>
+  </div>
 
   <!-- Footer Section -->
   <footer>
@@ -78,5 +81,17 @@
       <p>&copy; 2024 Pourush Nair | All Rights Reserved</p>
     </div>
   </footer>
+
+  <script>
+    // JavaScript to toggle the chat bot visibility
+    document.getElementById('contactBtn').addEventListener('click', function() {
+      var chatBot = document.getElementById('chatBot');
+      if (chatBot.style.display === 'none' || chatBot.style.display === '') {
+        chatBot.style.display = 'block';
+      } else {
+        chatBot.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
