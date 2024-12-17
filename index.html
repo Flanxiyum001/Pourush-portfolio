@@ -1,98 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Pourush Nair, a passionate coder, gamer, and lifelong learner.">
-  <title>Pourush Nair - Portfolio</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flanxiyum | Personalized Futuristic Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white;
+            overflow-x: hidden;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #000000, #0f2027);
+        }
+        header h1 {
+            font-size: 4rem;
+            margin: 0;
+            text-transform: uppercase;
+        }
+        header p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #ff4d00;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #e63c00;
+        }
+        .section {
+            padding: 50px;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 3rem;
+        }
+        .portfolio-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .portfolio-card {
+            width: 300px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s;
+        }
+        .portfolio-card:hover {
+            transform: scale(1.05);
+        }
+        .portfolio-card h3 {
+            margin: 0 0 10px 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000000;
+        }
+    </style>
 </head>
-<body class="animated-background">
-  <!-- Preloader Screen -->
-  <div id="preloader">
-    <div class="loader-container">
-      <div class="slide digit1" id="digit1">0</div>
-      <div class="slide digit2" id="digit2">0</div>
-      <div class="slide digit3" id="digit3">0</div>
-    </div>
-  </div>
-
-  <div id="mainContent" class="main-content hidden">
-    <header class="hero">
-      <div class="container">
-        <h1>Pourush Nair</h1>
-        <p>Making an online version of myself with programming</p>
-        <a href="#myWork" class="cta-button">Welcome to my world!</a>
-      </div>
+<body>
+    <header>
+        <div>
+            <h1>Welcome to Flanxiyum</h1>
+            <p>Making an online version of myself with programming.</p>
+            <a href="#portfolio"><button>Explore My World</button></a>
+        </div>
     </header>
 
-    <!-- About Me Section -->
-    <section id="aboutMe" class="section">
-      <div class="container">
+    <section class="section" id="about">
         <h2>About Me</h2>
-        <p>I'm Pourush Nair, a passionate coder, gamer, and lifelong learner. Currently pursuing my graduation, I love experimenting with Python and JavaScript to create exciting projects.</p>
-        <p>When I'm not coding, you'll find me immersed in gaming, listening to music, or diving into a great book.</p>
-        <img src="assets/images/about-me.jpg" alt="Pourush Nair coding at his desk">
-      </div>
+        <p>I'm doing my graduation and love coding, gaming, music, and learning new languages. Aspiring eSports player and developer!</p>
     </section>
 
-    <!-- My Work Section -->
-    <section id="myWork" class="section">
-      <div class="container">
-        <h2>My Work</h2>
-        <div class="work-item">
-          <h3>Web-Ruby</h3>
-          <p>Dynamic and interactive web application built with modern frameworks.</p>
-          <img src="assets/images/web-ruby.jpg" alt="Screenshot of Web-Ruby project">
-          <a href="https://github.com/Flanxiyum001/Web-Ruby" target="_blank" rel="noopener">
-            <button>View Project</button>
-          </a>
+    <section class="section" id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-container">
+            <div class="portfolio-card">
+                <h3>Web-Ruby</h3>
+                <p>A modern website framework designed for simplicity.</p>
+            </div>
+            <div class="portfolio-card">
+                <h3>Flanxiyum-AI</h3>
+                <p>AI Assistant capable of learning and automating tasks.</p>
+            </div>
         </div>
-        <div class="work-item">
-          <h3>Flanxiyum AI</h3>
-          <p>Innovative AI assistant with machine learning capabilities.</p>
-          <img src="assets/images/flanxiyum-ai.jpg" alt="Screenshot of Flanxiyum AI project">
-          <a href="https://github.com/Flanxiyum001/Flanxiyum-AI" target="_blank" rel="noopener">
-            <button>View Project</button>
-          </a>
-        </div>
-      </div>
     </section>
 
-    <!-- Contact Button -->
-    <button id="contactBtn" class="cta-button">Contact Me</button>
-
-    <!-- Chat Bot Style Contact Form -->
-    <div id="chatBot" class="chat-bot">
-      <div class="contact-container">
-        <h1>Contact Me</h1>
-        <form action="https://formspree.io/f/{your-form-id}" method="POST">
-            <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" placeholder="Pourush Nair" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" placeholder="you@example.com" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Your Message</label>
-                <textarea id="message" name="message" placeholder="Your message here..." required></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Send Message</button>
+    <section class="section" id="contact">
+        <h2>Contact Me</h2>
+        <form action="mailto:pourushnair@gmail.com" method="post" enctype="text/plain">
+            <label>Your Name:</label>
+            <input type="text" name="name" placeholder="Your Name" required><br>
+            <label>Your Message:</label>
+            <textarea name="message" placeholder="Let's collaborate!" required></textarea><br>
+            <button type="submit">Send</button>
         </form>
-      </div>
-    </div>
+    </section>
 
-    <!-- Footer Section -->
-    <footer>
-      <div class="container">
-        <p>&copy; 2024 Pourush Nair | All Rights Reserved</p>
-      </div>
+    <footer class="footer">
+        <p>&copy; 2024 Pourush Nair | Built with Code & Passion.</p>
     </footer>
-  </div>
-
-  <script src="assets/js/scripts.js"></script>
 </body>
 </html>
