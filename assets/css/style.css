@@ -1,154 +1,109 @@
 /* General Styles */
-* {
+body {
+    background-color: #0f0f0f; /* Dark background */
+    color: #fff;
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-body {
-    font-family: 'Orbitron', sans-serif;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    color: white;
     overflow-x: hidden;
-}
-
-/* Navigation Bar */
-nav {
-    position: fixed;
+  }
+  
+  /* Particle Background */
+  #particles-js {
+    position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 10px 0;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  /* Hero Section */
+  .hero {
     text-align: center;
-    z-index: 1000;
-}
-nav a {
+    padding: 100px 0;
+    background: #000; /* Darker background for hero section */
+  }
+  
+  .hero h1 {
+    font-size: 50px;
+    color: #ff4d4d; /* Red highlight */
+  }
+  
+  .hero .cta-button {
+    background-color: #ff4d4d;
     color: white;
-    margin: 0 20px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
-nav a:hover {
-    color: #ff4d00;
-}
-
-/* Header Section */
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #000000, #0f2027);
-}
-header h1 {
-    font-size: 4rem;
-    margin: 0;
-    text-transform: uppercase;
-}
-header p {
-    font-size: 1.5rem;
-    margin-top: 10px;
-}
-button {
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    background-color: #ff4d00;
+    padding: 15px 30px;
     border: none;
-    border-radius: 5px;
-    color: white;
+    font-size: 20px;
+    border-radius: 30px;
     cursor: pointer;
-    transition: 0.3s;
-}
-button:hover {
-    background-color: #e63c00;
-}
-
-/* Section General Styles */
-.section {
-    padding: 100px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .hero .cta-button:hover {
+    transform: scale(1.1);
+    background-color: #ff8080;
+  }
+  
+  /* About Section */
+  .about {
+    padding: 50px;
+    background: #121212;
+  }
+  
+  .about h2 {
+    font-size: 40px;
+    color: #00ff00; /* Green for contrast */
+  }
+  
+  .about p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #ccc;
+  }
+  
+  /* Portfolio Section */
+  .portfolio {
+    padding: 50px;
+    background: #121212;
+  }
+  
+  .portfolio h2 {
+    font-size: 40px;
+    color: #ff4d4d; /* Red color for title */
     text-align: center;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-.section.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-.section h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-/* Portfolio Section */
-.portfolio-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-.portfolio-card {
-    width: 300px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 20px;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s;
-}
-.portfolio-card:hover {
-    transform: scale(1.05);
-}
-.portfolio-card h3 {
-    margin: 0 0 10px 0;
-}
-
-/* Contact Section */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-input, textarea {
-    width: 80%;
-    max-width: 500px;
-    padding: 10px;
-    font-size: 1rem;
+  }
+  
+  .project {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .project h3 {
+    font-size: 30px;
+    color: #fff;
+  }
+  
+  .project a {
+    text-decoration: none;
+  }
+  
+  .project button {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 15px 30px;
     border: none;
-    border-radius: 5px;
-    outline: none;
-}
-textarea {
-    resize: none;
-    height: 150px;
-}
-form button {
-    margin-top: 10px;
-}
-
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #000000;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5rem;
-    }
-    header p {
-        font-size: 1rem;
-    }
-    button {
-        font-size: 1rem;
-        padding: 8px 15px;
-    }
-    .portfolio-card {
-        width: 100%;
-    }
-}
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .project button:hover {
+    transform: scale(1.1);
+    background-color: #ff8080;
+  }
+  
