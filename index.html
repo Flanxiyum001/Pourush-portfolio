@@ -19,7 +19,7 @@
   </div>
 
   <div id="mainContent" class="main-content hidden">
-    <header>
+    <header class="hero">
       <div class="container">
         <h1>Pourush Nair</h1>
         <p>Making an online version of myself with programming</p>
@@ -28,7 +28,7 @@
     </header>
 
     <!-- About Me Section -->
-    <section id="aboutMe">
+    <section id="aboutMe" class="section">
       <div class="container">
         <h2>About Me</h2>
         <p>I'm Pourush Nair, a passionate coder, gamer, and lifelong learner. Currently pursuing my graduation, I love experimenting with Python and JavaScript to create exciting projects.</p>
@@ -38,7 +38,7 @@
     </section>
 
     <!-- My Work Section -->
-    <section id="myWork">
+    <section id="myWork" class="section">
       <div class="container">
         <h2>My Work</h2>
         <div class="work-item">
@@ -93,47 +93,6 @@
     </footer>
   </div>
 
-  <script>
-    // JavaScript to toggle the chat bot visibility
-    document.getElementById('contactBtn').addEventListener('click', function() {
-      var chatBot = document.getElementById('chatBot');
-      if (chatBot.style.display === 'none' || chatBot.style.display === '') {
-        chatBot.style.display = 'block';
-      } else {
-        chatBot.style.display = 'none';
-      }
-    });
-
-    // JavaScript for Preloader Timer
-    document.addEventListener('DOMContentLoaded', function() {
-      var digit1 = document.getElementById('digit1');
-      var digit2 = document.getElementById('digit2');
-      var digit3 = document.getElementById('digit3');
-      var count = 0;
-      var interval = setInterval(function() {
-        var countStr = count.toString().padStart(3, '0');
-        digit1.innerText = countStr.charAt(0);
-        digit2.innerText = countStr.charAt(1);
-        digit3.innerText = countStr.charAt(2);
-        count++;
-        if (count > 100) {
-          clearInterval(interval);
-          setTimeout(function() {
-            document.getElementById('digit1').classList.add('slide-up');
-          }, 0); // No delay for the first slide
-          setTimeout(function() {
-            document.getElementById('digit2').classList.add('slide-up');
-          }, 1000); // 1-second gap
-          setTimeout(function() {
-            document.getElementById('digit3').classList.add('slide-up');
-          }, 2000); // 1-second gap after second digit
-          setTimeout(function() {
-            document.getElementById('preloader').style.display = 'none';
-            document.getElementById('mainContent').classList.remove('hidden');
-          }, 3000); // Delay to allow all slides to open
-        }
-      }, 40); // 4000ms/100 = 40ms per count
-    });
-  </script>
+  <script src="assets/js/scripts.js"></script>
 </body>
 </html>

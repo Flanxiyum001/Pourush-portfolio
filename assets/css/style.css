@@ -40,6 +40,8 @@ body.animated-background {
     justify-content: center;
     align-items: center;
     z-index: 9999;
+    opacity: 1;
+    transition: opacity 1s ease-out;
 }
 
 .loader-container {
@@ -80,13 +82,17 @@ body.animated-background {
 .container {
     width: 80%;
     margin: 0 auto;
+    padding: 20px;
 }
 
 /* Header Styling */
-header {
-    background: #0a0a0a;
-    padding: 60px 0;
+header.hero {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/hero-background.jpg') no-repeat center center/cover;
+    color: white;
     text-align: center;
+    padding: 100px 0;
+    background-attachment: fixed;
     border-bottom: 2px solid #ff4d4d;
     animation: fadeIn 0.5s ease forwards;
 }
@@ -101,21 +107,20 @@ header p {
     margin-top: 10px;
 }
 
-.cta-button {
-    background-color: #ff4d4d;
+.cta-button, .work-item button, .submit-btn {
+    background: linear-gradient(45deg, #ff6b6b, #ff4d4d);
     color: white;
     padding: 10px 20px;
-    font-size: 1.2em;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1.2em;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     margin-top: 20px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cta-button:hover {
-    background-color: #e60000;
+.cta-button:hover, .work-item button:hover, .submit-btn:hover {
+    background: linear-gradient(45deg, #ff4d4d, #ff1a1a);
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
 }
@@ -175,8 +180,8 @@ header p {
 .work-item {
     background-color: rgba(18, 18, 18, 0.8); /* Slightly transparent to show background animation */
     border: 1px solid #ff4d4d;
-    margin: 20px 0;
-    padding: 20px;
+    margin: 30px 0;
+    padding: 30px;
     border-radius: 8px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
     color: white; /* Text color */
@@ -204,24 +209,6 @@ header p {
     height: auto;
     border-radius: 10px;
     margin-top: 10px;
-}
-
-.work-item button {
-    background-color: white; /* Button color */
-    color: black; /* Text color */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    margin-top: 15px;
-}
-
-.work-item button:hover {
-    background-color: #ddd; /* Hover background color */
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Contact Me Section as Chat Bot */
