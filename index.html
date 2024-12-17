@@ -1,68 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flanx Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Russo+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flanxiyum | Personalized Futuristic Page</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-<!-- Particle Background -->
-<div id="particles-js"></div>
+    <!-- Header Section -->
+    <header>
+        <div>
+            <h1>Welcome to Flanxiyum</h1>
+            <p>Making an online version of myself with programming.</p>
+            <a href="#portfolio"><button>Explore My World</button></a>
+        </div>
+    </header>
 
-<!-- Hero Section -->
-<div class="hero">
-  <h1>Welcome to my world!</h1>
-  <p>Your personalized, futuristic space.</p>
-  <a href="#about" class="cta-button">Explore More</a>
-</div>
+    <!-- About Section -->
+    <section class="section" id="about">
+        <h2>About Me</h2>
+        <p>I'm doing my graduation and love coding, gaming, music, and learning new languages. Aspiring eSports player and developer!</p>
+    </section>
 
-<!-- About Section -->
-<div class="about" id="about">
-  <h2>About Me</h2>
-  <p>I'm a coding enthusiast, aspiring eSports player, and developer. I enjoy gaming, learning new programming languages, and creating cool projects.</p>
-</div>
+    <!-- Portfolio Section -->
+    <section class="section" id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-container">
+            <div class="portfolio-card">
+                <h3>Web-Ruby</h3>
+                <p>A modern website framework designed for simplicity.</p>
+            </div>
+            <div class="portfolio-card">
+                <h3>Flanxiyum-AI</h3>
+                <p>AI Assistant capable of learning and automating tasks.</p>
+            </div>
+        </div>
+    </section>
 
-<!-- Portfolio Section -->
-<div class="portfolio">
-  <h2>Featured Work</h2>
-  <div class="project">
-    <h3>Web-Ruby</h3>
-    <a href="https://github.com/Flanxiyum001/Web-Ruby" target="_blank" rel="noopener">
-      <button>View on GitHub</button>
-    </a>
-  </div>
-  <div class="project">
-    <h3>Flanxiyum-AI</h3>
-    <a href="https://github.com/Flanxiyum001/Flanxiyum-AI" target="_blank" rel="noopener">
-      <button>View on GitHub</button>
-    </a>
-  </div>
-</div>
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <h2>Contact Me</h2>
+        <form name="contact" method="POST" netlify action="/success.html">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required><br>
+            
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required><br>
+            
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" placeholder="Type your message here..." required></textarea><br>
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>  
 
-<script>
-  // Particles.js Configuration
-  particlesJS("particles-js", {
-    "particles": {
-      "number": {
-        "value": 80
-      },
-      "size": {
-        "value": 3
-      },
-      "move": {
-        "speed": 1
-      },
-      "line_linked": {
-        "enable": true,
-        "color": "#ff4d4d"
-      }
-    }
-  });
-</script>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Pourush Nair | Built with Code & Passion.</p>
+    </footer>
 
+    <!-- Scroll Animation Script -->
+    <script>
+        const sections = document.querySelectorAll('.section');
+        window.addEventListener('scroll', () => {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < window.innerHeight - 100) {
+                    section.classList.add('show');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
