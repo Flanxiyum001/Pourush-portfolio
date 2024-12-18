@@ -12,9 +12,6 @@ body {
   font-family: 'Orbitron', sans-serif;
   color: #fff;
   background: url('../images/hero-background.jpg') no-repeat center center/cover;
-  background-size: cover;
-  image-rendering: -webkit-optimize-contrast; /* Chrome (optional) */
-  image-rendering: optimize-contrast;         /* CSS4 */
   height: 100vh;
   overflow-x: hidden;
 }
@@ -25,17 +22,18 @@ nav {
   justify-content: flex-end;
   padding: 20px;
   gap: 20px;
+  animation: fadeInDown 1s ease-out forwards;
 }
 
-nav a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 700;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #ff4f00;
+@keyframes fadeInDown {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
 /* Hero Section */
@@ -45,48 +43,31 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  animation: fadeIn 1.5s ease-in-out forwards, slideUp 1.5s ease-in-out forwards;
+  animation: fadeInUp 1s ease-out forwards;
 }
 
-header h1 {
-  font-size: 3.5rem;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-}
-
-header button {
-  padding: 12px 25px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #fff;
-  background-color: #ff4f00;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-header button:hover {
-  background-color: #e64100;
-  transform: scale(1.05);
-  animation: bounce 0.3s ease;
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
 /* Section Styling */
 .section {
   padding: 50px 10%;
   opacity: 0;
+  transform: translateY(20px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .section.show {
   opacity: 1;
   transform: translateY(0);
-  animation: fadeInUp 1s ease-in-out forwards;
 }
 
 .section h2 {
@@ -95,13 +76,15 @@ header button:hover {
   color: #ff4f00;
 }
 
+/* Portfolio Container */
 .portfolio-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
+/* Portfolio Card */
 .portfolio-card {
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
@@ -130,26 +113,4 @@ footer {
 footer p {
   margin: 0;
   color: #fff;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideUp {
-  from { transform: translateY(20px); }
-  to { transform: translateY(0); }
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-  40% { transform: translateY(-10px); }
-  60% { transform: translateY(-5px); }
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
 }
