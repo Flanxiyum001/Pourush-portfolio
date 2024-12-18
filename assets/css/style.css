@@ -16,6 +16,17 @@ body {
   overflow-x: hidden;
 }
 
+/* Logo */
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.logo img {
+  width: 150px;
+}
+
 /* Navigation Bar */
 nav {
   display: flex;
