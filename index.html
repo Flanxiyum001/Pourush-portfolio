@@ -7,13 +7,18 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/animations.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="assets/js/mesh-animation.js"></script> <!-- Link to your mesh animation script -->
 </head>
 <body>
+    <!-- Canvas for Mesh Animation -->
+    <canvas id="meshCanvas"></canvas>
+
     <!-- Navigation Bar -->
     <nav>
         <a href="#about">About</a>
-        <a href="#tickets">Tickets</a>
-        <a href="#details">Details</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
     </nav>
 
     <!-- Header Section -->
@@ -68,18 +73,6 @@
     </footer>
 
     <!-- Scroll Animation Script -->
-    <script>
-        const sections = document.querySelectorAll('.section');
-        window.addEventListener('scroll', () => {
-            sections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-                if (sectionTop < window.innerHeight - 100) {
-                    section.classList.add('show');
-                }
-            });
-        });
-    </script>
-    <!-- Mesh Animation Script -->
-    <script src="assets/js/mesh-animation.js"></script>
+    <script src="assets/js/animations.js"></script>
 </body>
 </html>

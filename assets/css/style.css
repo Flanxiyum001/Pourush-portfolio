@@ -14,6 +14,16 @@ body {
   overflow-x: hidden;
 }
 
+/* Canvas Styling */
+canvas {
+    position: fixed; /* Make the canvas fixed to the viewport */
+    top: 0;         /* Align to the top */
+    left: 0;        /* Align to the left */
+    width: 100%;    /* Full width */
+    height: 100%;   /* Full height */
+    z-index: -1;    /* Behind other content */
+}
+
 /* Navigation Bar */
 nav {
   display: flex;
