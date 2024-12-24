@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         particles.push({
             x: Math.random() * canvas.width,
             y: Math.random() * canvas.height,
-            vx: (Math.random() - 0.5) * 2,
+            vx: (Math.random() - 0.5) * 2,x,
             vy: (Math.random() - 0.5) * 2,
             radius: 2 + Math.random() * 3
         });
