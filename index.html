@@ -3,74 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flanxiyum | Personalized Futuristic Page</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/animations.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="assets/js/mesh-animation.js"></script> <!-- Link to your mesh animation script -->
+    <title>Flanx Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header Section with Canvas for Mesh Animation -->
-    <header>
-        <canvas id="meshCanvas"></canvas> <!-- Canvas for Mesh Animation -->
-        <div>
-            <h1>Welcome to Flanxiyum</h1>
-            <p>Making an online version of myself with programming.</p>
+    <header id="home">
+        <div class="hero">
+            <h1>Flanx</h1>
+            <p>A passionate first-year student, diving deep into coding, anime, and gaming.</p>
+            <a href="#projects" class="cta-button">View Projects</a>
         </div>
     </header>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="#about">About</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <!-- About Section -->
-    <section class="section" id="about">
+    <section id="about">
         <h2>About Me</h2>
-        <p>I'm doing my graduation and love coding, gaming, music, and learning new languages. Aspiring eSports player and developer!</p>
+        <p>I’m Flanx, a first-year graduate student with a love for anime, coding, and music. I play a variety of games and am currently learning HTML, CSS, and JavaScript to bring my ideas to life. I’m always looking forward to exploring new technologies and improving my skills.</p>
     </section>
 
-    <!-- Portfolio Section -->
-    <section class="section" id="portfolio">
-        <h2>Portfolio</h2>
-        <div class="portfolio-container">
-            <div class="portfolio-card">
-                <h3>Web-Ruby</h3>
-                <p>A modern website framework designed for simplicity.</p>
-            </div>
-            <div class="portfolio-card">
-                <h3>Flanxiyum-AI</h3>
-                <p>AI Assistant capable of learning and automating tasks.</p>
-            </div>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <a href="https://github.com/Flanxiyum001/PersonaX" target="_blank" rel="noopener">PersonaX</a>
+        </div>
+        <div class="project">
+            <a href="https://github.com/Flanxiyum001/HyperCore" target="_blank" rel="noopener">HyperCore</a>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="section" id="contact">
-        <h2>Contact Me</h2>
-        <form name="contact" method="POST" netlify action="/success.html">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required><br>
-            
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" required><br>
-            
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message" placeholder="Type your message here..." required></textarea><br>
-            
-            <button type="submit">Send</button>
-        </form>
-    </section>  
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <p>I'm excited to learn new languages soon!</p>
+    </section>
 
-    <!-- Footer -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:pourushnair@gmail.com">pourushnair@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/Flanxiyum001" target="_blank" rel="noopener">Flanx's GitHub</a></p>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Pourush Nair | Built with Code & Passion.</p>
+        <p>Follow me: 
+            <a href="https://www.instagram.com/flanxiyum?igsh=MXZheXZuOGRrbTNnaA%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram</a> |
+            <a href="https://x.com/flanxiyum?s=21" target="_blank" rel="noopener">Twitter</a> |
+            <a href="https://www.facebook.com/share/18c6bLnw6g/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
+        </p>
     </footer>
 
-    <!-- Scroll Animation Script -->
-    <script src="assets/js/animations.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
